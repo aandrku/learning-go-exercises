@@ -1,0 +1,7 @@
+Slice is essentially a pointer an array.
+
+UpdateSlice receives a copy of a pointer to a slice that we created in the main function
+that points to an array and through that pointer changes the last value
+
+GrowSlice also receives the same pointer, but it creates a new array and a new pointer to that array, replaces the initial pointer and we no longer have a pointer to an old array in GrowSlice function call,
+but it doesnt change the initial pointer in main, so slice in main points to the initial array and bigger array is gone, or will be gone after garbage collection.
